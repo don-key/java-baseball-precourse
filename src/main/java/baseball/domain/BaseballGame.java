@@ -81,7 +81,7 @@ public class BaseballGame {
             inputCheck = validateRestartInput(input);
         }
 
-        if(RESTART_GAME.equals(input)) {
+        if (RESTART_GAME.equals(input)) {
             computer.initNumbers();
             return true;
         } else {
