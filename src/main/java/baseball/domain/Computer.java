@@ -1,23 +1,23 @@
 package baseball.domain;
 
+import nextstep.utils.Randoms;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import nextstep.utils.Randoms;
 
 public class Computer {
 
     private final List<Integer> numbers = new ArrayList<>();
 
     public Computer() {
-        initNumbers();
+        generateNumbers();
     }
 
     public List<Integer> getNumbers() {
         return numbers;
     }
 
-    private void initNumbers() {
+    private void generateNumbers() {
         while (numbers.size() < 3) {
             addNumber(Randoms.pickNumberInRange(1, 9));
         }
@@ -29,7 +29,7 @@ public class Computer {
         }
     }
 
-    private Boolean isDuplicate(int number) {
+    private boolean isDuplicate(int number) {
         return numbers.contains(number);
     }
 
