@@ -9,7 +9,7 @@ public class Player {
 
     private static final int NUMBER_SIZE = 3;
     private final InputView inputView;
-    private final List<Integer> numbers = new ArrayList<>();
+    private List<Integer> numbers;
 
     public Player() {
         inputView = new InputView();
@@ -26,6 +26,7 @@ public class Player {
 
     private void addNumber(String stringNumbers) {
         validateString(stringNumbers);
+        numbers = new ArrayList<>();
         for (int i = 0; i < NUMBER_SIZE; i++) {
             int number = Character.getNumericValue(stringNumbers.charAt(i));
             validateNumber(number);
