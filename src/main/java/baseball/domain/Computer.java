@@ -17,6 +17,11 @@ public class Computer {
         return numbers;
     }
 
+    public void initNumbers() {
+        numbers.clear();
+        generateNumbers();
+    }
+
     private void generateNumbers() {
         while (numbers.size() < 3) {
             addNumber(Randoms.pickNumberInRange(1, 9));

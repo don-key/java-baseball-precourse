@@ -1,27 +1,16 @@
 package baseball.domain;
 
-import baseball.view.OutputView;
-
 import java.util.List;
 
 public class Referee {
 
-    private final OutputView outputView;
-
     public Referee() {
-        outputView = new OutputView();
     }
 
-    public boolean checkNumbers(List<Integer> computerNumbers, List<Integer> playerNumbers) {
-        int strike = checkStrike(computerNumbers, playerNumbers);
+    public Score checkScore(List<Integer> computerNumbers, List<Integer> playerNumbers) {
+        int 리 = checkStrike(computerNumbers, playerNumbers);
         int ball = checkBall(computerNumbers, playerNumbers);
-        outputView.printCheckNumbers(strike, ball);
-        if (strike == 3) {
-            outputView.printEndGame();
-            return true;
-        } else {
-            return false;
-        }
+        return new Score(strike, ball);
     }
 
     private int checkStrike(List<Integer> computerNumbers, List<Integer> playerNumbers) {

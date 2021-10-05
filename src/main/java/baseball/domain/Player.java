@@ -1,22 +1,17 @@
 package baseball.domain;
 
-import baseball.view.InputView;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
 
     private static final int NUMBER_SIZE = 3;
-    private final InputView inputView;
     private List<Integer> numbers;
 
     public Player() {
-        inputView = new InputView();
     }
 
-    public void inputNumbers() {
-        String stringNumbers = inputView.inputPlayerNumbers();
+    public void inputNumbers(String stringNumbers) {
         addNumber(stringNumbers);
     }
 
@@ -45,7 +40,7 @@ public class Player {
     }
 
     private void validateNumber(int number) {
-        if (!isNumber(number) && isDuplicate(number)) {
+        if (!isNumber(number) || isDuplicate(number)) {
             throw new IllegalArgumentException();
         }
     }
