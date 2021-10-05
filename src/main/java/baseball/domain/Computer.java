@@ -24,7 +24,7 @@ public class Computer {
     }
 
     private void addNumber(int number) {
-        if(!isDuplicate(number)) {
+        if (!isDuplicate(number)) {
             numbers.add(number);
         }
     }

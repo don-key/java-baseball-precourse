@@ -16,11 +16,11 @@ public class Referee {
         int strike = checkStrike(computerNumbers, playerNumbers);
         int ball = checkBall(computerNumbers, playerNumbers);
         outputView.printCheckNumbers(strike, ball);
-        if(strike == 3) {
-           outputView.printEndGame();
-           return true;
+        if (strike == 3) {
+            outputView.printEndGame();
+            return true;
         } else {
-           return false;
+            return false;
         }
     }
 
@@ -35,7 +35,7 @@ public class Referee {
     }
 
     private int addStrike(int index, Integer computerNumber, List<Integer> playerNumbers) {
-        if(playerNumbers.contains(computerNumber) && playerNumbers.get(index).equals(computerNumber)) {
+        if (playerNumbers.contains(computerNumber) && playerNumbers.get(index).equals(computerNumber)) {
             return 1;
         }
         return 0;
@@ -52,7 +52,7 @@ public class Referee {
     }
 
     private int addBall(int index, Integer computerNumber, List<Integer> playerNumbers) {
-        if(playerNumbers.contains(computerNumber) && !playerNumbers.get(index).equals(computerNumber)) {
+        if (playerNumbers.contains(computerNumber) && !playerNumbers.get(index).equals(computerNumber)) {
             return 1;
         }
         return 0;

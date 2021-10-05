@@ -45,7 +45,7 @@ public class Player {
     }
 
     private void validateNumber(int number) {
-        if(!isNumber(number) && isDuplicate(number)) {
+        if (!isNumber(number) && isDuplicate(number)) {
             throw new IllegalArgumentException();
         }
     }
