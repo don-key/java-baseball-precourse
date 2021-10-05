@@ -8,7 +8,7 @@ public class Referee {
     }
 
     public Score checkScore(List<Integer> computerNumbers, List<Integer> playerNumbers) {
-        int 리 = checkStrike(computerNumbers, playerNumbers);
+        int strike = checkStrike(computerNumbers, playerNumbers);
         int ball = checkBall(computerNumbers, playerNumbers);
         return new Score(strike, ball);
     }
