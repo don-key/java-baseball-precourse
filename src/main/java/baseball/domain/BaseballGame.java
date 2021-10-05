@@ -40,10 +40,10 @@ public class BaseballGame {
             isThreeStrike = referee.checkNumbers(computer.getNumbers(), player.getNumbers());
         }
 
-        return checkRestarGame();
+        return checkRestartGame();
     }
 
-    private boolean checkRestarGame() {
+    private boolean checkRestartGame() {
         String input = "";
         boolean isRestartGame = false;
         while (!isRestartGame) {
