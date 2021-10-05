@@ -7,7 +7,7 @@ import nextstep.utils.Randoms;
 
 public class Computer {
 
-    private List<Integer> numbers = new ArrayList<>();
+    private final List<Integer> numbers = new ArrayList<>();
 
     public Computer() {
         initNumbers();
