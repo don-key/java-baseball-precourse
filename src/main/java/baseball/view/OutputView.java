@@ -17,7 +17,7 @@ public class OutputView {
         System.out.println(ERROR_INVAILD_VALUE);
     }
 
-    public void printCheckNumbers(int strike, int ball) {
+    public void printCheckScore(int strike, int ball) {
         StringBuilder sb = new StringBuilder();
 
         if (strike > 0) {

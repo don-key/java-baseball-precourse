@@ -23,8 +23,8 @@ public class BaseballGame {
     }
 
     public void run() {
-        boolean endGame = true;
-        while (endGame) {
+        boolean endGame = false;
+        while (!endGame) {
             endGame = play();
         }
     }
@@ -36,7 +36,7 @@ public class BaseballGame {
                 inputPlayerNumbers();
 
                 Score score = checkScore();
-                printCheckNumbers(score);
+                printCheckScore(score);
 
                 isThreeStrike = isThreeStrike(score);
             } catch (IllegalArgumentException iae) {
@@ -56,8 +56,8 @@ public class BaseballGame {
         player.inputNumbers(inputView.inputPlayerNumbers());
     }
 
-    private void printCheckNumbers(Score score) {
-        outputView.printCheckNumbers(score.getStrike(), score.getBall());
+    private void printCheckScore(Score score) {
+        outputView.printCheckScore(score.getStrike(), score.getBall());
     }
 
     private boolean isThreeStrike(Score score) {
@@ -82,10 +82,10 @@ public class BaseballGame {
             inputCheck = validateRestartInput(input);
         }
 
-        if (RESTART_GAME.equals(input)) {
-            computer.initNumbers();
+        if (END_GAME.equals(input)) {
             return true;
         } else {
+            computer.initNumbers();
             return false;
         }
     }
