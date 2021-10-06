@@ -7,6 +7,7 @@ public class BaseballGame {
 
     public static final String RESTART_GAME = "1";
     public static final String END_GAME = "2";
+    public static final int THREE_STRIKE = 3;
     private final Player player;
     private final Computer computer;
     private final Referee referee;
@@ -60,7 +61,7 @@ public class BaseballGame {
     }
 
     private boolean isThreeStrike(Score score) {
-        if (score.getStrike() == 3) {
+        if (score.getStrike() == THREE_STRIKE) {
             outputView.printEndGame();
             return true;
         } else {

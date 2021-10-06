@@ -5,6 +5,8 @@ import nextstep.utils.Randoms;
 import java.util.ArrayList;
 import java.util.List;
 
+import static baseball.BaseballConstants.*;
+
 public class Computer {
 
     private final List<Integer> numbers = new ArrayList<>();
@@ -23,8 +25,8 @@ public class Computer {
     }
 
     private void generateNumbers() {
-        while (numbers.size() < 3) {
-            addNumber(Randoms.pickNumberInRange(1, 9));
+        while (numbers.size() < NUMBER_SIZE) {
+            addNumber(Randoms.pickNumberInRange(NUMBER_MIN, NUMBER_MAX));
         }
     }
 

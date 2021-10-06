@@ -3,13 +3,11 @@ package baseball.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import static baseball.BaseballConstants.*;
+
 public class Player {
 
-    private static final int NUMBER_SIZE = 3;
     private List<Integer> numbers;
-
-    public Player() {
-    }
 
     public void inputNumbers(String stringNumbers) {
         addNumber(stringNumbers);
@@ -46,7 +44,7 @@ public class Player {
     }
 
     private boolean isNumber(int number) {
-        return (0 < number && number < 10);
+        return (NUMBER_MIN <= number && number <= NUMBER_MAX);
     }
 
     private boolean isDuplicate(int number) {
